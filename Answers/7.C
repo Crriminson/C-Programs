@@ -1,0 +1,35 @@
+
+#include <stdio.h>
+#include <conio.h>
+
+int main() {
+    int marks;
+    char grade;
+    clrscr();
+
+    printf("Enter the marks (0-100): ");
+    scanf("%d", &marks);
+
+    if (marks >= 90 && marks <= 100) {
+	grade = 'A';
+    } else if (marks >= 80 && marks < 90) {
+	grade = 'B';
+    } else if (marks >= 70 && marks < 80) {
+	grade = 'C';
+    } else if (marks >= 60 && marks < 70) {
+	grade = 'D';
+    } else if (marks >= 50 && marks < 60) {
+	grade = 'E';
+    } else if (marks >= 0 && marks < 50) {
+	grade = 'F';
+    } else {
+	printf("Invalid marks entered. Please enter a value between 0 and 100.\n");
+	return 1; // Exit the program with an error code
+    }
+
+    printf("The grade is: %c\n", grade);
+
+    getch();
+
+    return 0;
+}
